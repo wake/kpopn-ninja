@@ -1,11 +1,5 @@
 # kpopn support
 
-如有任何問題需要協助，請從右側 issues 點入
+如有任何問題需要協助，請從右側 issues 點入後，按下 New issue 發佈問題。
 
-![](http://drop.wake.gs/1ks2R+)
-
-並按下 New issue 發佈
-
-![](http://drop.wake.gs/135Ea+)
-
-謝謝。
+我會儘快找時間回覆，謝謝。
