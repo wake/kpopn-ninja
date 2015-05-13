@@ -4,7 +4,7 @@
 Plugin Name: Kpopn Ninja
 Plugin URI: https://github.com/wake/kpopn-ninja
 Description: 針對 Kpopn 網站所撰寫的服務套組
-Version: 0.2
+Version: 0.3
 Author: Wake
 Author URI: http://wake.gs
 */
@@ -14,6 +14,7 @@ Author URI: http://wake.gs
   require_once dirname ( __FILE__ ) . '/updater.php';
 
   if (is_admin ()) {
+
     $config = array (
       'slug' => plugin_basename (__FILE__),
       'proper_folder_name' => 'kpopn-ninja',
@@ -29,6 +30,24 @@ Author URI: http://wake.gs
     );
 
     new WP_GitHub_Updater ($config);
+
+    /**
+     *
+     * 增加檢查更新的選項和執行動作
+     *
+     */
+
+    add_filter ("network_admin_plugin_action_links_{$config['slug']}", 'kpopn_ninja_update_manually_option');
+    add_filter ("plugin_action_links_{$config['slug']}", 'kpopn_ninja_update_manually_option');
+
+    function kpopn_ninja_update_manually_option ($links) {
+      $settings_link = '<a href="plugins.php?ninja-action=update">' . __( '檢查更新', 'Kpopn Ninja Updater' ) . '</a>';
+      array_unshift ($links, $settings_link);
+      return $links;
+    }
+
+    if (isset ($_GET['ninja-action']) && $_GET['ninja-action'] == 'update')
+      set_site_transient('get_site_transient_update_plugins', null);
   }
 
   /**

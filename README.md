@@ -6,7 +6,7 @@
 
 # Version
 
-~Current Version:0.2~
+~Current Version:0.3~
 
 # History
 
