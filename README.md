@@ -4,10 +4,6 @@
 
 有任何問題需要協助，可以 [直接點此](https://github.com/wake/kpopn-support/issues/new)，或從右側 issues 進入後，按下 New issue 發佈問題。我會儘快協助。 :smiley:
 
-# Version
-
-~Current Version:0.3.1~
-
 # History
 
 ### 2015-05-13
