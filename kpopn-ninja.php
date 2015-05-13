@@ -2,27 +2,33 @@
 
 /*
 Plugin Name: Kpopn Ninja
-Plugin URI: https://github.com/wake/kpopn-support
+Plugin URI: https://github.com/wake/kpopn-ninja
 Description: 針對 Kpopn 網站所撰寫的服務套組
-Version: 0.1
+Version: 0.2
 Author: Wake
 Author URI: http://wake.gs
 */
 
-  if (is_admin()) { // note the use of is_admin() to double check that this is happening in the admin
-    $config = array(
-      'slug' => plugin_basename (__FILE__), // this is the slug of your plugin
-      'proper_folder_name' => 'kpopn-ninja', // this is the name of the folder your plugin lives in
-      'api_url' => 'https://api.github.com/repos/wake/kpopn-ninja', // the github API url of your github repo
-      'raw_url' => 'https://raw.github.com/wake/kpopn-ninja/master', // the github raw url of your github repo
-      'github_url' => 'https://github.com/wake/kpopn-ninja', // the github url of your github repo
-      'zip_url' => 'https://github.com/wake/kpopn-ninja/zipball/master', // the zip url of the github repo
-      'sslverify' => true // wether WP should check the validity of the SSL cert when getting an update, see https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/2 and https://github.com/jkudish/WordPress-GitHub-Plugin-Updater/issues/4 for details
-      'requires' => '3.0', // which version of WordPress does your plugin require?
-      'tested' => '4.2.2', // which version of WordPress is your plugin tested up to?
-      'readme' => 'README.MD' // which file to use as the readme for the version number
+  // define ('WP_GITHUB_FORCE_UPDATE', true);
+
+  require_once dirname ( __FILE__ ) . '/updater.php';
+
+  if (is_admin ()) {
+    $config = array (
+      'slug' => plugin_basename (__FILE__),
+      'proper_folder_name' => 'kpopn-ninja',
+      'api_url' => 'https://api.github.com/repos/wake/kpopn-ninja',
+      'raw_url' => 'https://raw.github.com/wake/kpopn-ninja/master',
+      'github_url' => 'https://github.com/wake/kpopn-ninja',
+      'zip_url' => 'https://github.com/wake/kpopn-ninja/zipball/master',
+      'sslverify' => true,
+      'requires' => '3.0',
+      'tested' => '4.2.2',
+      'readme' => 'README.MD',
+      'access_token' => '',
     );
-    new WPGitHubUpdater($config);
+
+    new WP_GitHub_Updater ($config);
   }
 
   /**
