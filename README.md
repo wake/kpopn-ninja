@@ -1,5 +1,20 @@
-# kpopn support
+# Kpopn Ninja
 
-如有任何問題需要協助，請從右側 issues 點入後，按下 New issue 發佈問題。
+此 Repo 為協助 Kpopn 的問題與狀況排除。
 
-我會儘快找時間回覆，謝謝。
+有任何問題需要協助，可以 [直接點此](https://github.com/wake/kpopn-support/issues/new)，或從右側 issues 進入後，按下 New issue 發佈問題。我會儘快協助。 :smiley:
+
+# Version
+
+~Current Version:0.2~
+
+# History
+
+### 2015-05-13
+
+- 重新整理 repo，修正 kpopn-support 為 kpopn-ninja
+- 加入 wp plugin auto update 機制
+
+### 2015-04-20
+
+- 建立 support repo
