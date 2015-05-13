@@ -357,7 +357,7 @@ class WP_GitHub_Updater {
 
     // Check if the transient contains the 'checked' information
     // If not, just return its value without hacking it
-    if ( empty( $transient->checked ) )
+    if ( empty( $transient->checked ) && ! $this->overrule_transients())
       return $transient;
 
     // check the version and decide if it's new
