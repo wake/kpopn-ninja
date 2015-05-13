@@ -9,15 +9,13 @@ Author: Wake
 Author URI: http://wake.gs
 */
 
-  // define ('WP_GITHUB_FORCE_UPDATE', true);
-
-  if (isset ($_GET['ninja-action']) && $_GET['ninja-action'] == 'update') {
-    define ('WP_GITHUB_FORCE_UPDATE', true);
-  }
-
-  require_once dirname ( __FILE__ ) . '/updater.php';
-
   if (is_admin ()) {
+
+    if (isset ($_GET['ninja-action']) && $_GET['ninja-action'] == 'update') {
+      define ('WP_GITHUB_FORCE_UPDATE', true);
+    }
+
+    require_once dirname ( __FILE__ ) . '/updater.php';
 
     $config = array (
       'slug' => plugin_basename (__FILE__),
