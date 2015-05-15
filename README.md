@@ -6,6 +6,10 @@
 
 # History
 
+### 2015-05-15
+
+- 加入 FB metatags （暫時先用 Network Publisher 的 code 來改）
+
 ### 2015-05-13
 
 - 重新整理 repo，修正 kpopn-support 為 kpopn-ninja

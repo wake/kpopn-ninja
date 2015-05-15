@@ -4,10 +4,12 @@
 Plugin Name: Kpopn Ninja
 Plugin URI: https://github.com/wake/kpopn-ninja
 Description: 針對 Kpopn 網站所撰寫的服務套組
-Version: 0.3.1
+Version: 0.4.0
 Author: Wake
 Author URI: http://wake.gs
 */
+
+  define ('_KPOPN_NINJA_PATH', dirname (__FILE__));
 
   if (is_admin ()) {
 
@@ -15,7 +17,7 @@ Author URI: http://wake.gs
       define ('WP_GITHUB_FORCE_UPDATE', true);
     }
 
-    require_once dirname ( __FILE__ ) . '/updater.php';
+    require_once _KPOPN_NINJA_PATH . '/vendors/updater.php';
 
     $config = array (
       'slug' => plugin_basename (__FILE__),
@@ -96,9 +98,9 @@ Author URI: http://wake.gs
 
   /**
    *
-   * FB like 數量異常補救
+   * FB metatags
    *
    */
 
-  //require_once dirname( __FILE__ ) . '/fblike-with-shortlink.php';
+  require_once _KPOPN_NINJA_PATH . '/missions/fb-metatag.php';
 
