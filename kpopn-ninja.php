@@ -103,6 +103,3 @@ Author URI: http://wake.gs
    */
 
   require_once _KPOPN_NINJA_PATH . '/missions/fb-metatag.php';
-
-
-?>
