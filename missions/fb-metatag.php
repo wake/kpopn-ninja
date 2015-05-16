@@ -315,3 +315,5 @@ function kn_smart_truncate($string, $required_length) {
   }
   return implode(array_slice($parts, 0, $last_part));
 }
+
+?>

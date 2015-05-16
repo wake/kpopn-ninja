@@ -4,7 +4,7 @@
 Plugin Name: Kpopn Ninja
 Plugin URI: https://github.com/wake/kpopn-ninja
 Description: 針對 Kpopn 網站所撰寫的服務套組
-Version: 0.4.0
+Version: 0.4.1
 Author: Wake
 Author URI: http://wake.gs
 */
@@ -104,3 +104,5 @@ Author URI: http://wake.gs
 
   require_once _KPOPN_NINJA_PATH . '/missions/fb-metatag.php';
 
+
+?>
