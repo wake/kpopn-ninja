@@ -68,7 +68,7 @@ Author URI: http://wake.gs
 
     ?>
     <input type="hidden" name="kpopn_ninja_nonce" value="<?php echo wp_create_nonce (plugin_basename (__FILE__)); ?>" />
-    <?
+    <?php
 
     $meta = get_post_meta ($object->ID, 'Kpopn Ninja', true);
 
